@@ -16,7 +16,7 @@ namespace GradeBook.GradeBooks
         {
             if (averageGrade < 5)
             {
-                throw new InvalidOperationException("Ranked Grading requires more than 5 grades to caclulate an average ");
+                throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
             }
 
             //Will fe
