@@ -20,23 +20,36 @@ namespace GradeBook.GradeBooks
             }
 
             else
-            {
-
-
-
+            { 
                 //Will fe
                 var theshold = (int)Math.Ceiling(Students.Count * 0.2);
 
-                List<Student> grades = Students.OrderByDescending(e => e.AverageGrade)
-                    .Select(e => averageGrade)
+                var grades = Students.OrderByDescending(e => e.AverageGrade)
+                    .Select(e => e.AverageGrade)
                     .ToList();
 
-                if (grades[theshold - 1] { }=> averageGrade)
+                if (grades[theshold - 1] <= averageGrade)
                 {
-
+                    return 'A';
+                }
+                else if (grades[theshold * 2 - 1] <= averageGrade)
+                {
+                    return 'B';
+                }
+                else if (grades[theshold * 3 - 1] <= averageGrade)
+                {
+                    return 'C';
+                }
+                else if (grades[theshold * 4 - 1] <= averageGrade)
+                {
+                    return 'D';
+                }
+                else
+                {
+                    return 'F';
                 }
             }
-                return 'F';
+                
             }
         }
     }
