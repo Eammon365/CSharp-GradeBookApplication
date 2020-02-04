@@ -16,11 +16,9 @@ namespace GradeBook.GradeBooks
         {
             if (averageGrade < 5)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Ranked Grading requires more than 5 grades to caclulate an average ");
             }
 
-            else
-            { 
                 //Will fe
                 var theshold = (int)Math.Ceiling(Students.Count * 0.2);
 
@@ -48,8 +46,8 @@ namespace GradeBook.GradeBooks
                 {
                     return 'F';
                 }
-            }
+            
                 
-            }
+            
         }
     }
